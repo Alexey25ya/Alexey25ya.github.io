@@ -1,0 +1,240 @@
+.cart {
+    background: $bg-header;
+
+    &__header {
+        height: 148px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    & h1 {
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 29px;
+        color: $site-color;
+        text-transform: uppercase;
+    }
+}
+
+// контент корзины
+.shopping {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+//Левая сторона корзины
+.shop__cart {
+    margin: 96px 0 128px;
+
+    &-button {
+        display: flex;
+        justify-content: space-between;
+
+        & button,
+        a {
+            padding: 17px 40px 17px 40px;
+            border: 1px solid #A4A4A4;
+            background: none;
+            text-transform: uppercase;
+            font-style: normal;
+            font-size: 14px;
+            line-height: 17px;
+            color: #000000;
+            cursor: pointer;
+
+            &:hover {
+                color: #fff;
+                background: $site-color;
+                border: 1px solid $site-color;
+                transition: all 0.2s;
+            }
+        }
+
+        & a {
+            text-decoration: none;
+        }
+    }
+}
+
+//Карточки товара в корзине
+.cart__card {
+    display: flex;
+    margin: 0 0 40px 0;
+    box-shadow: (17px 19px 24px rgba(0, 0, 0, 0.13));
+
+    & a {
+        display: contents;
+    }
+
+    &:last-of-type {
+        margin: 0 0 72px 0;
+    }
+
+    &-text {
+        display: flex;
+        flex-direction: column;
+        padding: 22px 97px 62px 31px;
+        position: relative;
+
+        & h3 {
+            text-transform: uppercase;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 29px;
+            color: #222222;
+            margin: 0 0 42px 0
+        }
+
+        &>span {
+            margin: 0 0 6px 0;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 22px;
+            line-height: 26px;
+            color: #575757;
+        }
+    }
+
+    &-icon {
+        font-size: 30px;
+        position: absolute;
+        right: 22px;
+    }
+
+    & .quantity {
+        display: flex;
+
+        &__input {
+            border: 1px solid #EAEAEA;
+            width: 44px;
+            height: 25px;
+            margin: 0 0 0 24px;
+            text-align: center;
+
+            &::-webkit-inner-spin-button,
+            ::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+            }
+
+            &:focus::placeholder {
+                color: transparent;
+            }
+        }
+    }
+}
+
+//Правая сторона корзины
+.shop__forms {
+    margin: 113px 0 0 0;
+}
+
+.ship__form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 0 57px 0;
+
+    & button {
+        background: none;
+        text-transform: uppercase;
+        border: 1px solid #A4A4A4;
+        padding: 11px 14px 11px 14px;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 11px;
+        line-height: 13px;
+        color: #4A4A4A;
+        cursor: pointer;
+
+        &:hover {
+            color: #fff;
+            background: $site-color;
+            border: 1px solid $site-color;
+            transition: all 0.2s;
+        }
+    }
+
+    & h4 {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        text-transform: uppercase;
+        color: #222222;
+        margin: 0 0 20px 0;
+    }
+
+    & input {
+        @include input-area ();
+        margin: 0 0 20px 0;
+
+        &:focus::placeholder {
+            visibility: hidden;
+        }
+
+        & [type=number]::-webkit-inner-spin-button,
+        [type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+    }
+}
+
+.check__form {
+    background: #E2E2E2;
+    padding: 39px 43px 42px 43px;
+    text-align: right;
+
+    & button {
+        padding: 16px 42px 16px 42px;
+        text-transform: uppercase;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+        background: $site-color;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            background: #E05C6E;
+        }
+    }
+
+    & hr {
+        color: #E2E2E2;
+        margin: 21px 0 21px 0;
+    }
+
+    & h6 {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 11px;
+        line-height: 13px;
+        color: #4A4A4A;
+        text-transform: uppercase;
+        margin: 0 0 12px 0;
+
+        &>span {
+            margin: 0 0 0 25px;
+        }
+    }
+
+    & h4 {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        color: #222222;
+        text-transform: uppercase;
+
+        &>span {
+            margin: 0 0 0 25px;
+            color: $site-color;
+            font-weight: bold;
+        }
+    }
+}
